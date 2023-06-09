@@ -1,0 +1,175 @@
+
+*{
+margin: 0;
+padding: 0;
+box size: border-box;
+
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bd-mobile.jpg);
+  --stroke-color: rgba(248, 248, 248, 0.30);
+  --surface-color: rgba(248, 241, 241, 0.13);
+  --surface-color-hover: rgba(248, 241, 241, 0.09);
+  --highlight-color: rgba(248, 241, 241, 0.09);
+  --swith-bg-url: url(./assets/moon.svg);
+
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bd-mobile-light.png);
+   --stroke-color:  rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(217, 217, 217, 0.6);
+    --swith-bg-url: url(./assets/sun.svg);
+}
+
+body {
+  background-image: url(./assets/Desktopbd2.png);
+  background-repeat: no-repeat; 
+  background-position: top center;
+  background-size: cover;
+}
+
+body{
+background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+font-family: 'Inter', sans-serif;
+color: var(--text-color);
+}
+/* o que é o container? é a "grande caixa" onde está os conteudos do projeto ex: foto, meu nome, e os links*/
+#container {
+  width: 325px;
+  margin: 10px auto 0px;
+  padding: 0 24px;
+}
+/* o que é esse primeiro profile? é o espaço entre o "@levilucasdf" e as caixas abaixo com os links   */
+#profile {
+   
+  text-align: center;
+  padding: 2px;              
+}
+/* o que é esse segundo profile? é a imagem com a minha foto*/
+#profile img {
+  width: 140px;
+  margin: auto;
+  
+}
+/* o que é esse terceiro profile? é o nome "@levilucasdf"*/
+#profile p {
+
+font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+margin-top: 2px;
+
+}
+
+/* swith */
+#swith {
+   
+  position: relative;
+  width: 64px;
+  margin:  20px auto;
+  
+
+}
+
+#swith button {
+
+  width: 33px;
+  height: 33px;
+  background: #d9d9d9 var(--swith-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light #swith button {
+   right: 0;
+   left: initial;
+  
+}
+
+#swith span {
+  display: block;
+  width: 64px;
+  height: 23px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+   
+  
+}
+/* Agora caixas dos ul-li*/
+ul{
+
+  list-style: none;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  
+}
+/*tudo sobre as letras que estão dentro das caixas*/
+ul li a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 10px;
+  
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none; /* para tirar linha que fica embaixo dos nomes das caixas.*/
+  font-weight: 500; /*fonte das letras de dentro das caixas.*/
+  
+  transition: background 0.2s;
+}
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+#social-links {
+  display: flex;
+  justify-content: center;
+
+ padding: 5px 0;
+ 
+ font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2;
+}
+#social-links a:hover {
+  background: var(--highlight-color);
+  border-radius: 50%;
+}
+footer {
+  text-align: center;
+  padding: 4px 0;
+  font-size: 14px;
+}
+  
