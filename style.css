@@ -36,6 +36,7 @@ body {
 
 body{
 background: var(--bg-url) no-repeat top center/cover;
+height: 100vh;
 }
 
 body * {
@@ -44,7 +45,8 @@ color: var(--text-color);
 }
 /* o que é o container? é a "grande caixa" onde está os conteudos do projeto ex: foto, meu nome, e os links*/
 #container {
-  width: 325px;
+  width: 400px;
+  max-width: 588px;
   margin: 10px auto 0px;
   padding: 0 24px;
 }
